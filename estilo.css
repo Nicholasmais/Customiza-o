@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: darkgray;
+    display: flex;
+    min-height: 100vh;
+}
+
+.MenuHambur{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 1s ease-out;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+.MenuHamburBot{
+    width: 50px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px brown;
+}
+
+.MenuHamburBot::before,
+.MenuHamburBot::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px brown;
+}
+
+.MenuHamburBot::before{
+    transform: translateY(-16px);
+}
+.MenuHamburBot::after{
+    transform: translateY(16px);
+}
+
+.coluna{
+    position: absolute;
+    content: '';
+    transform: translateX(-500px);
+    width: 420px;
+    height: 500px;
+    background-color: rgb(79, 79, 179);
+    transition: all 1.4s ease-out;
+    border: 3px solid #fff;
+}
+
+/* ANIMAÇÃO */
+
+.MenuHambur.open   {
+    transition: all 1s ease-out;
+    transform: translateX(340px);
+    background: transparent;
+    box-shadow: none;
+    z-index: 1;
+}
+.coluna.open{
+    transition: all 1s ease-out;
+    transform: translateX(0px);
+}
