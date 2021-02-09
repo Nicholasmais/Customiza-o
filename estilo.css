@@ -8,10 +8,26 @@ body{
     background-color: darkgray;
     display: flex;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
+.texto{
+    position: absolute;
+    width: 520px;
+    left: 425px;
+    top: 100px;
+    text-align: justify;
+}
+
+.h1{
+    position: absolute;
+    left: 420px;
+    text-align: center;
+    width: 525px;
+}
+/* Menu da esquerda */
 .MenuHambur{
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,11 +72,70 @@ body{
     width: 420px;
     height: 500px;
     background-color: rgb(79, 79, 179);
-    transition: all 1.4s ease-out;
+    transition: transform 1.41s ease-out;
     border: 3px solid #fff;
 }
 
-/* ANIMAÇÃO */
+
+
+/* Menu da direita */
+
+.MenuHambur2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 1s ease-out;
+    border: 3px solid #fff;
+    right: 0;
+    z-index: 1;
+}
+
+
+.MenuHamburBot2{
+    width: 50px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px brown;
+}
+
+.MenuHamburBot2::before, .MenuHamburBot2::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px brown;
+
+}
+
+.MenuHamburBot2::before{
+    transform: translateY(-16px);
+}
+
+.MenuHamburBot2::after{
+    transform: translateY(16px);
+}
+
+.coluna2{
+    content: '';
+    width: 0;
+    height: 500px;
+    position: absolute;
+    right:0;
+    background-color: rgb(79, 79, 179); 
+    transition: width 1.2s ease-out, border 1.5s cubic-bezier(1,0,0,1);
+    border: 0px solid #fff;
+
+}
+
+
+/* MENUS ABERTOS */
 
 .MenuHambur.open   {
     transition: all 1s ease-out;
@@ -72,4 +147,107 @@ body{
 .coluna.open{
     transition: all 1s ease-out;
     transform: translateX(0px);
+}
+
+#cor{
+    cursor: pointer;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 19%;
+    height: 80px;
+    top: 80px;
+    z-index: 1;
+    color: black;
+    border-radius: 50%;
+}
+
+
+.verde{
+    background-color: rgb(80, 242, 80);
+}
+
+.amarelo{
+    background-color: rgb(235, 235, 97);
+}
+
+.vermelho{
+    background-color: rgb(250, 70, 70);
+}
+
+.azul{
+    background-color: rgb(101, 101, 247);
+}
+
+.cinza{
+    background-color: darkgray;
+}
+
+.roxo{
+    background-color: blueviolet;
+}
+
+.rosa{
+    background-color: rgb(235, 100, 158);
+}
+
+.laranja{
+    background-color: rgb(255, 123, 0);
+}
+
+
+.slidercontainer{
+    position: relative;
+    top: 130px;
+    width: auto;
+}
+
+.slider{
+    -webkit-appearance: none;  
+    background-color: #fff;
+    border-radius: 5em;
+    opacity: 1;
+    width: 100%;
+}
+
+.slider::-webkit-slider-thumb{
+    height: 25px;
+    border-radius: 50%; 
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb{
+    border-radius: 50%; 
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider.hover{
+    opacity: 1;
+}
+
+.numero{
+    position: relative;
+    text-align: center;
+}
+
+.MenuHambur2.open{
+    transition: all 1s ease-out;
+    right: 340px;
+    z-index: 1;
+}
+
+.coluna2.open{
+    position: absolute;
+    display: block;
+    margin-bottom: 5px;
+    right:0;
+    width: 420px;
+    background-color:  rgb(79, 79, 179);
+    border: 3px solid #fff;
+    transform-origin: 4px 0px;
+  
+ 
 }
