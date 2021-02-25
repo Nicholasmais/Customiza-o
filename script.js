@@ -18,22 +18,32 @@ menuBtn.addEventListener('click', ()=> {
 });
 
 
-
 function cor(color){
     document.body.style.backgroundColor = color;
 }
 
-function cort(cor){
-    document.querySelector('.texto').style.color = cor;
-    document.querySelector('.h1').style.color = cor;
+
+function pos(){
+
 }
 
+
 var slider = document.querySelector('.slider');
+var slider2 = document.querySelector(".slider2");
+
 var numero = document.querySelector('.numero');
-numero.innerHTML = slider.value;
+var numero2 = document.querySelector(".numero2");
+
+numero.innerHTML = slider.value + "%";
+numero2.innerHTML = slider2.value + "px";
 
 slider.oninput = function(){
     numero.innerHTML = this.value + '%';
     document.body.style.opacity = (this.value)/100;
 }
 
+slider2.oninput = function(){
+    numero2.innerHTML = slider2.value + "px";
+    document.querySelector(".texto").style.fontSize = (slider2.value) + "px";
+    document.querySelector(".h1").style.fontSize = 2*slider2.value + "px";
+}

@@ -11,19 +11,23 @@ body{
     overflow-x: hidden;
 }
 
+.escrita{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 45vw;
+
+}
+
 .texto{
-    position: absolute;
-    width: 520px;
-    left: 425px;
+    width: auto;
     top: 100px;
     text-align: justify;
 }
 
 .h1{
-    position: absolute;
-    left: 420px;
     text-align: center;
-    width: 525px;
 }
 /* Menu da esquerda */
 .MenuHambur{
@@ -76,63 +80,6 @@ body{
     border: 3px solid #fff;
 }
 
-
-
-/* Menu da direita */
-
-.MenuHambur2{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: all 1s ease-out;
-    border: 3px solid #fff;
-    right: 0;
-    z-index: 1;
-}
-
-
-.MenuHamburBot2{
-    width: 50px;
-    height: 6px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px brown;
-}
-
-.MenuHamburBot2::before, .MenuHamburBot2::after{
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 6px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px brown;
-
-}
-
-.MenuHamburBot2::before{
-    transform: translateY(-16px);
-}
-
-.MenuHamburBot2::after{
-    transform: translateY(16px);
-}
-
-.coluna2{
-    content: '';
-    width: 0;
-    height: 500px;
-    position: absolute;
-    right:0;
-    background-color: rgb(79, 79, 179); 
-    transition: width 1.2s ease-out, border 1.5s cubic-bezier(1,0,0,1);
-    border: 0px solid #fff;
-
-}
 
 
 /* MENUS ABERTOS */
@@ -203,7 +150,7 @@ body{
     width: auto;
 }
 
-.slider{
+.slider, .slider2{
     -webkit-appearance: none;  
     background-color: #fff;
     border-radius: 5em;
@@ -211,24 +158,24 @@ body{
     width: 100%;
 }
 
-.slider::-webkit-slider-thumb{
+.slider::-webkit-slider-thumb, .slider2::-webkit-slider-thumb{
     height: 25px;
     border-radius: 50%; 
     background: #4CAF50;
     cursor: pointer;
 }
 
-.slider::-moz-range-thumb{
+.slider::-moz-range-thumb, .slider2::-moz-range-thumb{
     border-radius: 50%; 
     background: #4CAF50;
     cursor: pointer;
 }
 
-.slider.hover{
+.slider.hover, .slider2.hover{
     opacity: 1;
 }
 
-.numero{
+.numero, .numero2{
     position: relative;
     text-align: center;
 }
